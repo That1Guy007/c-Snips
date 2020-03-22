@@ -8,9 +8,10 @@ void* myBitCopy(void* toLocation, const void* fromLocation, int len_of_mem_to_co
     size_t numOfBytes = len_of_mem_to_copy / 8; 
     int paddingRequired = len_of_mem_to_copy % 8;
     
-    //I need to think about how we handle not just strings and if there any cases that need to be handled for my implementation of memcpy
-    
-    
+// We need to perform bitwise operations inorder to copy at the bit level.
+//abcd
+//0110:0001-0110:0010-0110:0011-0110:0100 -> 0110:0001-0110:0010-0110:0011-0110:0000 Copied 28 bits with a 4 bit 0000 padding
+//Is the padding the best way to handle the ending information?
 }
 
 int main() {
